@@ -219,6 +219,11 @@ function llenadoCarrito() {
                         }
 
                     });
+                    if (carrito.length > 0) {
+                        divCarrito.innerHTML += `
+                        <h3 class="as">total a pagar: $${totalApagar()}</h3>
+                        <a href="#" class="btn">Pagar</a>`
+                    }
 
 
                 })
@@ -245,17 +250,18 @@ function llenadoCarrito() {
                     }
 
                 });
+                if (carrito.length > 0) {
+                    divCarrito.innerHTML += `
+                    <h3 class="as">total a pagar: $${totalApagar()}</h3>
+                    <a href="#" class="btn">Pagar</a>`
+                }
             }
         }
 
 
     });
     //si el largo del arreglo es mayor a 0 entonces se agregara el boton pagar, sino no aparecera
-    if (carrito.length > 0) {
-        divCarrito.innerHTML += `
-        <h3 class="as">total a pagar: $${totalApagar()}</h3>
-        <a href="#" class="btn">Pagar</a>`
-    }
+   
 
 
 }
